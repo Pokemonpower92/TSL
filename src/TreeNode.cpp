@@ -39,19 +39,19 @@ T TreeNode<T>::get_value()
 /* @ Accessors
  */
 template <class T>
-std::shared_ptr<TreeNode<T>> TreeNode<T>::get_parent()
+std::shared_ptr<TreeNode<T>> TreeNode<T>::get_parent() const
 {
     return this->_parent;
 }
 
 template <class T>
-std::shared_ptr<TreeNode<T>> TreeNode<T>::get_left()
+std::shared_ptr<TreeNode<T>> TreeNode<T>::get_left() const
 {
     return this->_left;
 }
 
 template <class T>
-std::shared_ptr<TreeNode<T>> TreeNode<T>::get_right()
+std::shared_ptr<TreeNode<T>> TreeNode<T>::get_right() const
 {
     return this->_right;
 }

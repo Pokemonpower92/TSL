@@ -4,9 +4,10 @@
 template <class T>
 class TreeNode {
 private:
-    T _value;
-    bool _color;
+    T _value; // This is what the Node holds.
+    bool _color; // Red/Black tree stuff.
 
+    // We keep pointers to every node this node touches.
     std::shared_ptr<TreeNode<T>> _left;
     std::shared_ptr<TreeNode<T>> _parent;
     std::shared_ptr<TreeNode<T>> _right;
@@ -18,9 +19,9 @@ public:
     void set_left(std::shared_ptr<TreeNode<T>> const& node);
     void set_right(std::shared_ptr<TreeNode<T>> const& node);
 
-    std::shared_ptr<TreeNode<T>> get_parent();
-    std::shared_ptr<TreeNode<T>> get_left();
-    std::shared_ptr<TreeNode<T>> get_right();
+    std::shared_ptr<TreeNode<T>> get_parent() const;
+    std::shared_ptr<TreeNode<T>> get_left() const;
+    std::shared_ptr<TreeNode<T>> get_right() const;
 
     T get_value();
 };
