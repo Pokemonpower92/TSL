@@ -18,10 +18,12 @@ public:
     void set_parent(std::shared_ptr<TreeNode<T>> const& node);
     void set_left(std::shared_ptr<TreeNode<T>> const& node);
     void set_right(std::shared_ptr<TreeNode<T>> const& node);
+    void set_color(bool color);
+    void set_value(T value);
 
     std::shared_ptr<TreeNode<T>> get_parent() const;
     std::shared_ptr<TreeNode<T>> get_left() const;
     std::shared_ptr<TreeNode<T>> get_right() const;
-
+    bool get_color();
     T get_value();
 };
