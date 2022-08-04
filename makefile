@@ -1,6 +1,5 @@
-GCC=clang++
+GCC=g++
 INCLUDE=include
-DEPS=animal.hpp diet.hpp dog.hpp
 
 SRCDIR=src 
 OBJDIR=obj
@@ -8,7 +7,7 @@ BINDIR=bin
 
 BINARY=$(BINDIR)/test
 
-_OBJ=TreeNode.o Test.o
+_OBJ=TreeNode.o TSLTree.o Test.o
 OBJ=$(patsubst %,$(OBJDIR)/%,$(_OBJ))
 
 all: $(BINARY)
