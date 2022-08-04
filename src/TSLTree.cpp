@@ -35,7 +35,6 @@ void TSLTree<T>::_insert_node(std::shared_ptr<TreeNode<T>> const& node)
 	}
 
 	this->_recursive_insert_helper(curr_node, node);
-	
 }
 
 template <class T>
