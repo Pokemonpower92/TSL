@@ -1,6 +1,7 @@
 #pragma once
 #include "TreeNode.hpp"
 #include <memory>
+#include <mutex>
 
 template <class T>
 class TSLTree {
@@ -8,6 +9,7 @@ class TSLTree {
 
 private:
     std::shared_ptr<TreeNode<T>> _root;
+    std::mutex _mutex;
     int _num_nodes;
 
     void _insert_node(std::shared_ptr<TreeNode<T>> const& node);
@@ -19,7 +21,9 @@ private:
 
 public:
     TSLTree<T>();
-    
+    TSLTree(TSLTree<T> const& other);
+    TSLTree<T>& operator=(TSLTree<T> const& other);
+
     std::shared_ptr<TreeNode<T>> insert_value(T value);
     std::shared_ptr<TreeNode<T>> find_value(T value) const;
 
